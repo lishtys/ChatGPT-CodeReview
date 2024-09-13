@@ -94,7 +94,7 @@ export const robot = (app: Probot) => {
         const ignoreList = (process.env.IGNORE || process.env.ignore || '')
           .split('\n')
           .filter((v) => v !== '');
-
+        console.log(process.env.IGNORE);
         const filesNames = files?.map((file) => file.filename) || [];
         changedFiles = changedFiles?.filter(
           (file) =>
